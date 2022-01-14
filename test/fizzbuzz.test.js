@@ -1,5 +1,6 @@
 const fizzBuzz = require("../src/fizzbuzz")
 
-test('TODO', () => {
+test('IsInt', () => {
     // TODO: Tester fizzbuzz()
+    
 })
