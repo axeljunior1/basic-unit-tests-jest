@@ -1,6 +1,5 @@
 function fizzBuzz (n) {
     // TODO: Compléter fizzbuzz()
-    
     if (n%3==0){
         if (n%5==0) {
             return "FizzBuzz";
@@ -15,7 +14,7 @@ function fizzBuzz (n) {
             return "Buzz";
         }
     }
-    
+
     return 'null'
     
 }
