@@ -1,23 +1,25 @@
 
 function computeAge(birthday, currentDate){
 
-    let age = currentDate.year() - birthday.year();
+    let age = currentDate.getFullYear() - birthday.getFullYear();
 
      
 
-    if(currentDate.monthIndex()> birthday.monthIndex()){
+    if(currentDate.getMonth()> birthday.getMonth()){
         return age;
     }
-    if(currentDate.monthIndex()< birthday.monthIndex()){
-        return age +1; 
+    if(currentDate.getMonth()< birthday.getMonth()){
+        return age-1; 
     }
     
-    if(currentDate.monthIndex()== birthday.monthIndex()){
-        if(currentDate.day()>birthday.day()){
+    if(currentDate.getMonth()== birthday.getMonth()){
+        if(currentDate.getDay() > birthday.getDay()){
             return age;
         }else{
-            return age+ 1; 
+            return age-1; 
         }
     } 
 
 }
+
+module.exports  = computeAge
