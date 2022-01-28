@@ -1,16 +1,19 @@
-function Arborescence() {
+function te() {
 
 }
 
-function createTree(tab) {
+function Arborescence(tab) {
     const map1 = new Map();
 
-    map1.set('id', tab[0]);
-    map1.set('nom', tab[1]);
-    map1.set('parent', tab[2]);
+    tab.forEach(function (elt){
+        map1.set(elt[0], elt);
+    });
 
     return map1;
 }
 
+function getAbsolutePath(tree, id) {
+    
+}
 
 module.exports = Arborescence;
