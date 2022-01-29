@@ -24,4 +24,18 @@ function getAbsolutePath(table_tree, id) {
     return t_ids;
 }
 
-module.exports =  getAbsolutePath;
+function getLowestCommonAncestor(tree , id1 , id2) {
+    let table_id1 = getAbsolutePath(tree, id1);
+    let table_id2 = getAbsolutePath(tree, id2);
+
+    if(id1===id2) return id1;
+
+    if (table_id1.length > table_id2.length)return id1;
+
+    if (table_id1.length < table_id2.length)return id2;
+
+    if (table_id1.length === table_id2.length)return Math.max(id1, id2); //on renvoi le fils droit si ils sont de meme profondeur
+
+}
+
+module.exports =  getLowestCommonAncestor;
